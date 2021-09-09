@@ -1,5 +1,10 @@
 module.exports = function routeUser(app) {
-    let user = require("../controllers/userController")
+    var user = require("../controllers/userController")
 
     app.route('/users').get(user.listUsers);
+
+    app.route('/users').post(user.saveUser);
+
+    app.route('/users').put(user.updateUser);
+
 }
