@@ -7,4 +7,5 @@ module.exports = function routeUser(app) {
 
     app.route('/users').put(user.updateUser);
 
+    app.route('/users/:id').delete(user.deleteUser);
 }
